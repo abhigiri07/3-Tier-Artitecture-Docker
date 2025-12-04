@@ -21,7 +21,7 @@ Launch an Amazon Linux EC2 instance.
 Connect to it via SSH:
 
 ```bash
-ssh -i trupti_key.pem ec2-user@<EC2-Public-IP>
+ssh -i <YOUR_KEY_PEM>.pem ec2-user@<EC2-Public-IP>
 ```
 ### Step 2: Install Docker & Docker Compose
 ```bash
