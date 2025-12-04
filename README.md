@@ -423,6 +423,7 @@ Check running containers:
 ```bash
 docker ps
 ```
+![](./Imgaes/Screenshot%20(154).png)
 
 ### Step 10: Verify Application
 Open your EC2 Public IP in a browser:
@@ -432,10 +433,16 @@ Open your EC2 Public IP in a browser:
 Fill out the form and click Submit.
 You should see a confirmation message with the entered data.
 
+### Output
+![](./Imgaes/Screenshot%20(151).png)
+![](./Imgaes/Screenshot%20(152).png)
+
 ### Step 11: Verify Database
 To confirm that the data is saved in MySQL:
 ```
 docker exec -it <db_container_id> mysql -uroot -proot studentapp mysql> SELECT * FROM users;
 ```
+![](./Imgaes/Screenshot%20(155).png)
+
 ### Conclusion
 The __Three-Tier PHP Registration Form — Docker Deployment__ project provides a practical and efficient demonstration of how modern applications can be architected, containerized, and deployed using Docker. By separating the frontend, backend, and database into dedicated containers, the setup ensures better scalability, reliability, and maintainability. Docker Compose further simplifies orchestration, making deployments consistent across different environments. Overall, this project not only showcases a clean three-tier architecture but also serves as a strong foundation for learners and developers looking to understand real-world container-based application deployment.
