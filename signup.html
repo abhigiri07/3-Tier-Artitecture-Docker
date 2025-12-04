@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 12px;
+            width: 420px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .gender-label {
+            margin-right: 15px;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Signup Form</h2>
+
+        <form action="submit.php" method="post">
+
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Website:</label>
+            <input type="url" name="website">
+
+            <label>Comment:</label>
+            <textarea name="comment" rows="4"></textarea>
+
+            <label>Gender:</label><br><br>
+
+            <label class="gender-label">
+                <input type="radio" name="gender" value="female" required> Female
+            </label>
+
+            <label class="gender-label">
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+
+            <label class="gender-label">
+                <input type="radio" name="gender" value="other"> Other
+            </label>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
